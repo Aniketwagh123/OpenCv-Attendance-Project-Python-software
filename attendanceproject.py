@@ -3,6 +3,7 @@ import numpy as np
 import face_recognition
 import os
 from datetime import datetime
+import backend as bk
 path = 'imageAttendance'
 images = []
 classNames = []
@@ -22,20 +23,15 @@ def findEncodings(images):
         img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
         encode = face_recognition.face_encodings(img)[0]
         encodList.append(encode)
+    # print(encodList)
     return encodList
 
 def markAttendance(name):
-    with open('Attendance.csv','r+') as f:
-        myDataList = f.readlines()
-        nameList = []
-
-        for line in myDataList:
-            entry = line.split(',')
-            nameList.append(entry[0])
-        if name not in nameList:
-            now = datetime.now()
-            dateString = now.strftime('%H:%M:%S')
-            f.writelines(f'\n{name},{dateString}')
+    now = datetime.now()
+    dateString = now.strftime('%H:%M:%S')
+    date=now.strftime('%d')
+    # f.writelines(f'\n{name},{dateString}')
+    bk.get_database(name,dateString,date)
 
 # markAttendance('aniket')
 
