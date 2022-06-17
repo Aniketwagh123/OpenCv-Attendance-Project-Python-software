@@ -3,11 +3,11 @@ import time
 import datetime
 
 from pymongo import MongoClient
-timetable={"Monday":{"ptrp":[300,630],"dldm":[630,690],"os":[690,750],"seminar":[780,840],"bhr":[840,900],"coa":[900,960]},
-           "Tuesday":{"coa":[300,630],"bhr":[630,690],"os":[690,750],"dldm":[780,840],"seminar":[840,900],"ptrp":[900,960]},
-           "Wednesday":{"coa":[300,630],"bhr":[630,690],"os":[690,750],"dldm":[780,840],"seminar":[840,900],"ptrp":[900,960]},
-           "Thursday":{"coa":[300,630],"bhr":[630,690],"os":[690,750],"dldm":[780,840],"seminar":[840,900],"ptrp":[1140,1460]},
-           "Friday":{"bhr":[300,630],"ptrp":[630,690],"os":[690,750],"dldm":[780,840],"seminar":[840,900],"coa":[900,960]}}
+timetable={"Monday":{"ptrp":[570,630],"dldm":[630,690],"os":[690,750],"seminar":[780,840],"bhr":[840,900],"coa":[900,960]},
+           "Tuesday":{"coa":[570,630],"bhr":[630,690],"os":[690,750],"dldm":[780,840],"seminar":[840,900],"ptrp":[900,960]},
+           "Wednesday":{"coa":[570,630],"bhr":[630,690],"os":[690,750],"dldm":[780,840],"seminar":[840,900],"ptrp":[900,960]},
+           "Thursday":{"coa":[570,630],"bhr":[630,690],"os":[690,750],"dldm":[780,840],"seminar":[840,900],"ptrp":[1140,1460]},
+           "Friday":{"bhr":[400,630],"ptrp":[630,690],"os":[690,750],"dldm":[780,840],"seminar":[840,900],"coa":[900,960]}}
 
 
 lec = {"dldm":0,"seminar":1,"ptrp":2,"bhr":3,"coa":4,"os":5}
