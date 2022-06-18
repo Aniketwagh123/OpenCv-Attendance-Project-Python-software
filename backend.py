@@ -7,7 +7,9 @@ timetable={"Monday":{"ptrp":[570,630],"dldm":[630,690],"os":[690,750],"seminar":
            "Tuesday":{"coa":[570,630],"bhr":[630,690],"os":[690,750],"dldm":[780,840],"seminar":[840,900],"ptrp":[900,960]},
            "Wednesday":{"coa":[570,630],"bhr":[630,690],"os":[690,750],"dldm":[780,840],"seminar":[840,900],"ptrp":[900,960]},
            "Thursday":{"coa":[570,630],"bhr":[630,690],"os":[690,750],"dldm":[780,840],"seminar":[840,900],"ptrp":[1140,1460]},
-           "Friday":{"bhr":[400,630],"ptrp":[630,690],"os":[690,750],"dldm":[780,840],"seminar":[840,900],"coa":[900,960]}}
+           "Friday":{"bhr":[400,630],"ptrp":[630,690],"os":[690,750],"dldm":[780,840],"seminar":[840,900],"coa":[900,960]},
+           "Saturday":{},
+           "Sunday":{}}
 
 
 lec = {"dldm":0,"seminar":1,"ptrp":2,"bhr":3,"coa":4,"os":5}
@@ -32,6 +34,8 @@ def get_database(name,datestring,date):
     pre = doc["sub"]
     print(pre)
     lec = get_lecture(curr_time, today)
+    if lec==None:
+        return
     temp = pre[lec]
     templ = temp.split(",")
     temp1 =str((int(templ[0])+1))+","+str((int(templ[1])+1))
