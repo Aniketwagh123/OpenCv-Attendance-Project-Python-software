@@ -21,8 +21,7 @@ Android App
 - 😻 This is the Python software which detect the face of student with the help of webcam/cctv camera.<br />
 - Then finds the quarry of that student name and roll no.<br />
 - Then according to the branch, division and timetable it update the attendance of that student in mongodb database (i.e increase the count of total lecture and attended lecture of that particular subject. * done only once in that timeframe of lecture)<br />
-- If student face were not detected in that timeframe of particular lecture then
-- only the count of total lecture will increase .<br />  
+- If student face were not detected in that timeframe of particular lecture then only the count of total lecture will increase .<br />  
 
 ## I'm a Student and Developer!!
 
